@@ -22,7 +22,7 @@ resource "azurerm_container_app" "app" {
   template {
     container {
       name   = "app"
-      image  = var.docker_image
+      image  = "rajeshwararao78/elevate-pro-cicd:latest"
       cpu    = 0.5
       memory = "1.0Gi"
 
