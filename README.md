@@ -51,14 +51,19 @@ pip install -r requirements.txt
 pip install -r requirements-dev.txt
 pytest -q
 
-Docker Build & Run
+---
+
+## 🐳 Docker Build & Run
 
 docker build -t <your-dockerhub-username>/elevate-pro-cicd:latest .
 docker run -p 8000:8000 <your-dockerhub-username>/elevate-pro-cicd:latest
 
 App will be available at http://localhost:8000
 
-🌐 Deployment on Azure
+---
+
+## 🌐 Deployment on Azure
+
 Deployment is fully automated via GitHub Actions and Terraform.
 Push changes to the main branch.
 GitHub Actions pipeline will:
@@ -68,16 +73,23 @@ Apply Terraform to provision Azure infra
 Deploy the app and output a public URL
 Final result: Application accessible on Azure with a public endpoint.
 
-🔒 Security
+---
+
+## 🔒 Security
+
 GitHub Secrets are used for sensitive values (DockerHub, Azure credentials).
 Terraform state can be stored securely in remote backends (Azure Storage recommended).
 Azure RBAC is applied for least-privilege access.
 
-✨ Key Learnings
+---
+
+## ✨ Key Learnings
 Implementing end-to-end CI/CD with GitHub Actions.
 Managing infrastructure using Terraform.
 Deploying containerized apps on Azure.
 Integrating testing, monitoring, and security into DevOps pipelines.
 
-👨‍💻 Author: Rajeswara Rao
-📅 Year: 2025
+---
+
+## 👨‍💻 Author: Rajeswara Rao
+## 📅 Year: 2025
